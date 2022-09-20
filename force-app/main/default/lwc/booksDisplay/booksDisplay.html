@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-page-header">Books by Author
+        <div>
+            <template for:each={booksByAuthor.data} for:item="book">
+                <p key={book.id}>
+                     {book.Name} <br> {book.Author__c}
+                </p>
+           </template>
+        </div>
+    </div>
+
+    <div class="slds-page-header">Books by Genre
+        <div>
+            <template for:each={booksByGenre.data} for:item="book">
+                <p key={book.id}>
+                     {book.Name} <br> {book.Genre__c}
+                </p>
+           </template>
+        </div>
+    </div>
+</template>
